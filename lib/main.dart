@@ -44,15 +44,20 @@ class HomeActivity extends StatelessWidget{
         builder: (BuildContext context){
             return Expanded(
               child: AlertDialog(
-                title:Text('Alert!'),
-                content:Text('Do You Want to Delete'),
+                title:const Text('Alert!'),
+                content:const Text('Do You Want to Delete'),
                 actions: [
                   TextButton(
+
                 
-                    onPressed: (){Navigator.of(context).pop();}, child: Text("Yes")),
+                    onPressed: (){
+                      MySnackBar("Deleted SuccessFully", context);
+                      Navigator.of(context).pop();
+
+                      }, child: const Text("Yes")),
 
                   TextButton(
-                    onPressed: (){Navigator.of(context).pop();}, child: Text("No"))
+                    onPressed: (){Navigator.of(context).pop();}, child: const Text("No")),
                 ],
 
               )
@@ -68,10 +73,10 @@ class HomeActivity extends StatelessWidget{
 
   Widget build(BuildContext context){
     final ButtonStyle buttonStyle=ElevatedButton.styleFrom(
-    padding:EdgeInsets.all(25),
+    padding:const EdgeInsets.all(25),
     backgroundColor: Colors.orange,
     foregroundColor: Colors.white,
-    shape: RoundedRectangleBorder(
+    shape: const RoundedRectangleBorder(
       borderRadius: BorderRadius.all(Radius.circular(30)),
       
     )
@@ -80,7 +85,7 @@ class HomeActivity extends StatelessWidget{
     
     return Scaffold(
       appBar: AppBar(
-        title:Text(
+        title:const Text(
         "Resto App",
         style:TextStyle(color: Colors.white,
         ),
@@ -93,26 +98,26 @@ class HomeActivity extends StatelessWidget{
         elevation: 20,
         backgroundColor: Colors.green,
         actions: [
-          IconButton(onPressed: (){MySnackBar("Comments loading",context);}, icon: Icon(Icons.comment)),
-          IconButton(onPressed: (){MySnackBar("Searching",context);}, icon: Icon(Icons.search)),
-          IconButton(onPressed: (){MySnackBar("Email list",context);}, icon: Icon(Icons.email)),
-          IconButton(onPressed: (){MySnackBar("Notification arrived",context);}, icon: Icon(Icons.notifications_sharp)),
+          IconButton(onPressed: (){MySnackBar("Comments loading",context);}, icon: const Icon(Icons.comment)),
+          IconButton(onPressed: (){MySnackBar("Searching",context);}, icon: const Icon(Icons.search)),
+          IconButton(onPressed: (){MySnackBar("Email list",context);}, icon: const Icon(Icons.email)),
+          IconButton(onPressed: (){MySnackBar("Notification arrived",context);}, icon: const Icon(Icons.notifications_sharp)),
         ],
 
       ),
 
       floatingActionButton: FloatingActionButton(
         elevation: 10,
-        child:Icon(Icons.add),
         backgroundColor: Colors.green,
         onPressed: (){
           MySnackBar("Added Successfully!", context);
         },
+        child:const Icon(Icons.add),
 
       ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: 1,
-        items:[
+        items:const [
           BottomNavigationBarItem(icon: Icon(Icons.home),label: "Home"),
           BottomNavigationBarItem(icon: Icon(Icons.person),label: "Profile"),
           BottomNavigationBarItem(icon: Icon(Icons.call),label: "Call"),
@@ -135,31 +140,31 @@ class HomeActivity extends StatelessWidget{
         child:ListView(
           children: [
             DrawerHeader(
-              padding:EdgeInsets.all(0),
+              padding:const EdgeInsets.all(0),
               child:UserAccountsDrawerHeader(
-                  decoration:BoxDecoration(color:Colors.green),
-                  accountName: Text("Onnow Limited"),
-                  accountEmail: Text("onnow-customer.io@gmail.com"),
+                  decoration:const BoxDecoration(color:Colors.green),
+                  accountName: const Text("Onnow Limited"),
+                  accountEmail: const Text("onnow-customer.io@gmail.com"),
                   currentAccountPicture: Image.network("https://www.onnow.io/wp-content/uploads/2021/05/onnow.png"),
 
               ),
               ),
             ListTile(
-              leading:Icon(Icons.home),
-              title:Text("Home"),
+              leading:const Icon(Icons.home),
+              title:const Text("Home"),
               onTap: (){MySnackBar("Home", context);},
               ),
             ListTile(
-              leading:Icon(Icons.gif_box_sharp),
-              title:Text("Orders"),
+              leading:const Icon(Icons.gif_box_sharp),
+              title:const Text("Orders"),
               onTap: (){MySnackBar("Orders", context);},),
             ListTile(
-              leading:Icon(Icons.money),
-              title:Text("Payment"),
+              leading:const Icon(Icons.money),
+              title:const Text("Payment"),
               onTap: (){MySnackBar("Payment", context);},),
             ListTile(
-              leading:Icon(Icons.note),
-              title:Text("Delivered"),
+              leading:const Icon(Icons.note),
+              title:const Text("Delivered"),
               onTap: (){MySnackBar("Delivered", context);},),
 
           ],
@@ -204,7 +209,7 @@ class HomeActivity extends StatelessWidget{
     // ),
 
     body:Center(
-      child:ElevatedButton(child: Text('Click Me'),onPressed: (){MySnackBar("", context);},),
+      child:ElevatedButton(child: const Text('Click Me'),onPressed:(){MyAlertDialog(context);},),
 
     )
 
