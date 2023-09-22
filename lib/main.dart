@@ -167,16 +167,17 @@ class HomeActivity extends StatelessWidget{
     //   ],
     // ) ,  
 
-    body:Row(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      children: [
-        TextButton(onPressed: (){MySnackBar("Pay with bkash",context);}, child: Text("Bkash")),
-        ElevatedButton(onPressed: (){MySnackBar("Heat with Nagad", context);}, child: Text("Nagad"),style:buttonStyle),
-        OutlinedButton(onPressed: (){MySnackBar("Online Payment", context);}, child: Text("Pay with Onnow"))
-      ],
-    ),
+// button sytel
+    // body:Row(
+    //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+    //   children: [
+    //     TextButton(onPressed: (){MySnackBar("Pay with bkash",context);}, child: Text("Bkash")),
+    //     ElevatedButton(onPressed: (){MySnackBar("Heat with Nagad", context);}, child: Text("Nagad"),style:buttonStyle),
+    //     OutlinedButton(onPressed: (){MySnackBar("Online Payment", context);}, child: Text("Pay with Onnow"))
+    //   ],
+    // ),
 
-    );
+    // );
   }
 
 
