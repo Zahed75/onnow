@@ -167,7 +167,6 @@ class HomeActivity extends StatelessWidget{
     //   ],
     // ) ,  
 
-// button sytel
     // body:Row(
     //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
     //   children: [
@@ -177,7 +176,12 @@ class HomeActivity extends StatelessWidget{
     //   ],
     // ),
 
-    // );
+    body:Center(
+      child:ElevatedButton(child: Text('Click Me'),onPressed: (){},),
+      
+    )
+
+    );
   }
 
 
