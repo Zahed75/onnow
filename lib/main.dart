@@ -35,6 +35,33 @@ class HomeActivity extends StatelessWidget{
     );
   }
 
+//alret Dialog!!
+
+  MyAlertDialog(context){
+
+    return showDialog(
+        context: context,
+        builder: (BuildContext context){
+            return Expanded(
+              child: AlertDialog(
+                title:Text('Alert!'),
+                content:Text('Do You Want to Delete'),
+                actions: [
+                  TextButton(
+                
+                    onPressed: (){Navigator.of(context).pop();}, child: Text("Yes")),
+
+                  TextButton(
+                    onPressed: (){Navigator.of(context).pop();}, child: Text("No"))
+                ],
+
+              )
+              
+              );
+        }
+     );
+  }
+
 
 
   @override
@@ -177,8 +204,8 @@ class HomeActivity extends StatelessWidget{
     // ),
 
     body:Center(
-      child:ElevatedButton(child: Text('Click Me'),onPressed: (){},),
-      
+      child:ElevatedButton(child: Text('Click Me'),onPressed: (){MySnackBar("", context);},),
+
     )
 
     );
