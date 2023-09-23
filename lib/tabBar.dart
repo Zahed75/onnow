@@ -1,4 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:onnow/Fragment/AlarmFragment.dart';
+import 'package:onnow/Fragment/BalanceFragment.dart';
+import 'package:onnow/Fragment/BoostFragment.dart';
+import 'package:onnow/Fragment/ContactFragment.dart';
+import 'package:onnow/Fragment/HomeFragment.dart';
+import 'package:onnow/Fragment/MessageFragment.dart';
+import 'package:onnow/Fragment/ProfileFragment.dart';
+import 'package:onnow/Fragment/SettingsFragment.dart';
 
 main(){
   runApp(const MyApp()); //Application create korte hobe
@@ -54,11 +62,19 @@ const HomeActivity({super.key});
             ],
         )
         ),
-      // body:TabBarView(
-      //   children: [
-          
-      //   ],
-      //   )
+      body:TabBarView(
+        children: [
+          HomeFragment(),
+          MessageFragment(),
+          SettingsFragment(),
+          ContactFragment(),
+          ProfileFragment(),
+          AlarmFragment(),
+          BalanceFragment(),
+         BoostFragment(),
+         
+        ],
+        )
       )
     );
 

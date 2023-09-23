@@ -1,6 +1,6 @@
 import 'package:flutter/widgets.dart';
 
-class SearchFragment extends StatelessWidget{
+class MessageFragment extends StatelessWidget{
 
 
   @override
@@ -8,7 +8,7 @@ class SearchFragment extends StatelessWidget{
   Widget build(BuildContext context){
     return Container(
       child:Center(
-        child:Text("Home Page")
+        child:Text("Message Page")
       ),
     );
   }

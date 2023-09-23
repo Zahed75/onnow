@@ -8,7 +8,7 @@ class BalanceFragment extends StatelessWidget{
   Widget build(BuildContext context){
     return Container(
       child:Center(
-        child:Text("Home Page")
+        child:Text("Balance Page")
       ),
     );
   }
