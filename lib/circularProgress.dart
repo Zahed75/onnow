@@ -35,9 +35,9 @@ class ProgressActivity extends StatelessWidget{
         title:Text("Progress check"),
       ),
       body:Center(
-        child:CircularProgressIndicator(
+        child:LinearProgressIndicator(
           color:Colors.green,
-          strokeWidth: 3,
+          // strokeWidth: 3,
 
         ),
       )
