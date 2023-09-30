@@ -24,8 +24,9 @@ class LayoutActivity extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text("Layout App")),
-      body: SingleChildScrollView(
-        child: Column(
+      body: SingleChildScrollView(  
+        scrollDirection: Axis.horizontal,  /// Horizontal scroll direction hole horizontal ar vertical hole columd
+        child: Row(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Container(height: 200, width: 200, color: Colors.orange),
