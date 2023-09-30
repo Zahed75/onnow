@@ -34,6 +34,8 @@ class LayoutActivity extends StatelessWidget {
             Container(height: 200, width: 200, color: Colors.green),
             Container(height: 200, width: 200, color: Colors.black),
             Container(height: 200, width: 200, color: Colors.red),
+            Container(height: 200, width: 200, color: Colors.pink),
+            Container(height: 200, width: 200, color: Colors.blue),
           ],
         ),
       ),
