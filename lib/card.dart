@@ -49,9 +49,9 @@ class HomeActivity extends StatelessWidget{
                 width:200,
                 child:Center(child:Text('This is a card'),)
                 
-              )
-            )
-          )
+              ),
+            ),
+          ),
       );
     
     }

@@ -20,27 +20,21 @@ class LayOutApp extends StatelessWidget {
 
 class LayoutActivity extends StatelessWidget {
   const LayoutActivity({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text("Layout App")),
-      body: LayoutBuilder(
-        builder: (BuildContext context, BoxConstraints constraints) {
-          if (constraints.maxWidth > 600) {
-            return Container(
-              height: 400,
-              width: 400,
-              color: Colors.red, // Set color here
-            );
-          } else {
-            return Container(
-              height: 200,
-              width: 200,
-              color: Colors.orange, // Set color here
-            );
-          }
-        },
+      body: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Container(height: 200, width: 200, color: Colors.orange),
+            Container(height: 200, width: 200, color: Colors.blue),
+            Container(height: 200, width: 200, color: Colors.green),
+            Container(height: 200, width: 200, color: Colors.black),
+            Container(height: 200, width: 200, color: Colors.red),
+          ],
+        ),
       ),
     );
   }
