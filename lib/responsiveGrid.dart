@@ -23,30 +23,73 @@ class GridActivity extends StatelessWidget {
   const GridActivity({super.key});
   @override
   Widget build(BuildContext context) {
-    
     return Scaffold(
         appBar: AppBar(
           title: Text("Responsive Grid"),
-          ),
-        body:ResponsiveGridRow(
-          children: [
-            ResponsiveGridCol(
-              lg:12,
-              child:Container(
-                height:400,
-                color:Colors.green,
-              )
-              ),
+        ),
+        body: SingleChildScrollView(
+          scrollDirection: Axis.vertical,
+          child: ResponsiveGridRow(
+            children: [
               ResponsiveGridCol(
-              lg:6,md:6,xl:4,sm:9,xs:12,
-              child:Container(
-                height:200,
-                color:Colors.orange,
-              )
-              ),
+                  lg: 12,
+                  child: Container(
+                    height: 400,
+                    color: Colors.redAccent,
+                  )),
 
-          ],
-        ) ,
-        );
+              ResponsiveGridCol(
+                  xl: 3,
+                  lg: 3,
+                  md: 3,
+                  sm: 12,
+                  xs: 12,
+                  child: Container(
+                    height: 500,
+                    color: Colors.orange,
+                  )),
+                   ResponsiveGridCol(
+                  xl: 3,
+                  lg: 3,
+                  md: 3,
+                  sm: 12,
+                  xs: 12,
+                  child: Container(
+                    height: 500,
+                    color: Colors.blue,
+                  )),
+                     ResponsiveGridCol(
+                  xl: 3,
+                  lg: 3,
+                  md: 3,
+                  sm: 12,
+                  xs: 12,
+                  child: Container(
+                    height: 500,
+                    color: Colors.green,
+                  )),
+                     ResponsiveGridCol(
+                  xl: 3,
+                  lg: 3,
+                  md: 3,
+                  sm: 12,
+                  xs: 12,
+                  child: Container(
+                    height: 500,
+                    color: Colors.black,
+                  )),
+                     ResponsiveGridCol(
+                  xl: 3,
+                  lg: 3,
+                  md: 3,
+                  sm: 12,
+                  xs: 12,
+                  child: Container(
+                    height: 500,
+                    color: Colors.greenAccent,
+                  )),
+            ],
+          ),
+        ));
   }
 }
