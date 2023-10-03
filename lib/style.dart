@@ -6,7 +6,7 @@ TextStyle HeadLine(context) {
   if (width < 700) {
     //Mobile devices
     return TextStyle(
-      color: Colors.green, 
+      color: Colors.orange
       fontSize: 34,
       );
   } else {
