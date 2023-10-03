@@ -6,14 +6,14 @@ TextStyle HeadLine(context) {
   if (width < 700) {
     //Mobile devices
     return TextStyle(
-      color: Colors.orange
+      color: Colors.green,
       fontSize: 34,
       );
   } else {
     //Desktop devices
     return TextStyle(
-      color: Colors.orange, 
-    fontSize: 65,
+      color: Colors.orange,
+    fontSize: 60,
     );
   }
 }
